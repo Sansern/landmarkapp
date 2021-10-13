@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05AAF86B271739E9007C7CFE /* landmarkappApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AAF86A271739E9007C7CFE /* landmarkappApp.swift */; };
+		05AAF86B271739E9007C7CFE /* LandmarksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AAF86A271739E9007C7CFE /* LandmarksApp.swift */; };
 		05AAF86D271739E9007C7CFE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AAF86C271739E9007C7CFE /* ContentView.swift */; };
 		05AAF86F271739EB007C7CFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05AAF86E271739EB007C7CFE /* Assets.xcassets */; };
 		05AAF872271739EB007C7CFE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05AAF871271739EB007C7CFE /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		05AAF867271739E9007C7CFE /* landmarkapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = landmarkapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		05AAF86A271739E9007C7CFE /* landmarkappApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = landmarkappApp.swift; sourceTree = "<group>"; };
+		05AAF867271739E9007C7CFE /* LandmarkApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LandmarkApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		05AAF86A271739E9007C7CFE /* LandmarksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarksApp.swift; sourceTree = "<group>"; };
 		05AAF86C271739E9007C7CFE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		05AAF86E271739EB007C7CFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05AAF871271739EB007C7CFE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -43,7 +43,7 @@
 		05AAF868271739E9007C7CFE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				05AAF867271739E9007C7CFE /* landmarkapp.app */,
+				05AAF867271739E9007C7CFE /* LandmarkApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -51,7 +51,7 @@
 		05AAF869271739E9007C7CFE /* landmarkapp */ = {
 			isa = PBXGroup;
 			children = (
-				05AAF86A271739E9007C7CFE /* landmarkappApp.swift */,
+				05AAF86A271739E9007C7CFE /* LandmarksApp.swift */,
 				05AAF86C271739E9007C7CFE /* ContentView.swift */,
 				05AAF86E271739EB007C7CFE /* Assets.xcassets */,
 				05AAF870271739EB007C7CFE /* Preview Content */,
@@ -84,7 +84,7 @@
 			);
 			name = landmarkapp;
 			productName = landmarkapp;
-			productReference = 05AAF867271739E9007C7CFE /* landmarkapp.app */;
+			productReference = 05AAF867271739E9007C7CFE /* LandmarkApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -138,7 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05AAF86D271739E9007C7CFE /* ContentView.swift in Sources */,
-				05AAF86B271739E9007C7CFE /* landmarkappApp.swift in Sources */,
+				05AAF86B271739E9007C7CFE /* LandmarksApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +284,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = mint.landmarkapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = LandmarkApp;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -314,7 +314,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = mint.landmarkapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = LandmarkApp;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
