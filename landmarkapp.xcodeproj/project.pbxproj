@@ -12,6 +12,7 @@
 		05AAF86F271739EB007C7CFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05AAF86E271739EB007C7CFE /* Assets.xcassets */; };
 		05AAF872271739EB007C7CFE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05AAF871271739EB007C7CFE /* Preview Assets.xcassets */; };
 		05AAF87927173E51007C7CFE /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AAF87827173E51007C7CFE /* CircleImage.swift */; };
+		05AAF87B27174130007C7CFE /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AAF87A27174130007C7CFE /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		05AAF86E271739EB007C7CFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05AAF871271739EB007C7CFE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		05AAF87827173E51007C7CFE /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		05AAF87A27174130007C7CFE /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				05AAF86A271739E9007C7CFE /* LandmarksApp.swift */,
 				05AAF87827173E51007C7CFE /* CircleImage.swift */,
 				05AAF86C271739E9007C7CFE /* ContentView.swift */,
+				05AAF87A27174130007C7CFE /* MapView.swift */,
 				05AAF86E271739EB007C7CFE /* Assets.xcassets */,
 				05AAF870271739EB007C7CFE /* Preview Content */,
 			);
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05AAF86D271739E9007C7CFE /* ContentView.swift in Sources */,
+				05AAF87B27174130007C7CFE /* MapView.swift in Sources */,
 				05AAF86B271739E9007C7CFE /* LandmarksApp.swift in Sources */,
 				05AAF87927173E51007C7CFE /* CircleImage.swift in Sources */,
 			);
