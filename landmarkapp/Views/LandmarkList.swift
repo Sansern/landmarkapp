@@ -10,9 +10,15 @@ import SwiftUI
 struct LandmarkList: View {
     var body: some View {
         
-//     The model data’s landmarks array to the List initializer.
-        List(landmarks) { landmark in
-            LandmarkRow(landmark: landmark)
+
+        NavigationView {
+            //  The model data’s landmarks array to the List initializer.
+            List(landmarks) { landmark in
+                NavigationLink(destination: LandmarkDetail()) {
+                    LandmarkRow(landmark: landmark)
+                }
+            }
+            .navigationTitle("Landmarks")
         }
         
         
