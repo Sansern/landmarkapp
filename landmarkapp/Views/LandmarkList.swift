@@ -16,6 +16,7 @@ struct LandmarkList: View {
             List(landmarks) { landmark in
                 NavigationLink(destination: LandmarkDetail(landmark: landmark)) {
                     LandmarkRow(landmark: landmark)
+                        .padding(.vertical, 8.0)
                 }
             }
             .navigationTitle("Landmarks")
@@ -27,6 +28,12 @@ struct LandmarkList: View {
 
 struct LandmarkList_Previews: PreviewProvider {
     static var previews: some View {
-        LandmarkList()
+        Group {
+            LandmarkList()
+            LandmarkList()
+                .previewDevice("iPod touch (7th generation)")
+            LandmarkList()
+                .previewDevice("iPhone 13 Pro Max")
+        }
     }
 }
