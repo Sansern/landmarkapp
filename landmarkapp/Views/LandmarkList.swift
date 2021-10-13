@@ -14,7 +14,7 @@ struct LandmarkList: View {
         NavigationView {
             //  The model data’s landmarks array to the List initializer.
             List(landmarks) { landmark in
-                NavigationLink(destination: LandmarkDetail()) {
+                NavigationLink(destination: LandmarkDetail(landmark: landmark)) {
                     LandmarkRow(landmark: landmark)
                 }
             }
