@@ -8,12 +8,20 @@
 import SwiftUI
 
 struct LandmarkList: View {
+    @State private var showFavoritesOnly = false
+    
+//    Compute a filtered version of the landmarks list by checking the showFavoritesOnly property and each landmark.isFavorite value.
+    var filteredLandmarks: [Landmark] {
+        landmarks.filter { landmark in
+            (!showFavoritesOnly || landmark.isFavorite)
+        }
+    }
+    
     var body: some View {
-        
 
         NavigationView {
             //  The model data’s landmarks array to the List initializer.
-            List(landmarks) { landmark in
+            List(filteredLandmarks) { landmark in
                 NavigationLink(destination: LandmarkDetail(landmark: landmark)) {
                     LandmarkRow(landmark: landmark)
                         .padding(.vertical, 8.0)
