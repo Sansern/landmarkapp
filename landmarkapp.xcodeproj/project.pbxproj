@@ -67,10 +67,10 @@
 		05AAF869271739E9007C7CFE /* landmarkapp */ = {
 			isa = PBXGroup;
 			children = (
-				05AAF88227174E6D007C7CFE /* Resources */,
-				05AAF88327174E82007C7CFE /* Model */,
-				05AAF88427174EF0007C7CFE /* Views */,
 				05AAF86A271739E9007C7CFE /* LandmarksApp.swift */,
+				05AAF88427174EF0007C7CFE /* Views */,
+				05AAF88327174E82007C7CFE /* Model */,
+				05AAF88227174E6D007C7CFE /* Resources */,
 				05AAF86E271739EB007C7CFE /* Assets.xcassets */,
 				05AAF870271739EB007C7CFE /* Preview Content */,
 			);
