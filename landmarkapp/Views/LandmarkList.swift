@@ -20,14 +20,21 @@ struct LandmarkList: View {
     var body: some View {
 
         NavigationView {
+            
             //  The model data’s landmarks array to the List initializer.
-            List(filteredLandmarks) { landmark in
-                NavigationLink(destination: LandmarkDetail(landmark: landmark)) {
-                    LandmarkRow(landmark: landmark)
-                        .padding(.vertical, 8.0)
+        
+            List {
+                Toggle(isOn: $showFavoritesOnly) {
+                    Text("Favorites Only")
                 }
+                ForEach(filteredLandmarks) { landmark in
+                    NavigationLink(destination: LandmarkDetail(landmark: landmark)) {
+                        LandmarkRow(landmark: landmark)
+                            .padding(.vertical, 8.0)
+                    }
+                }
+                .navigationTitle("Landmarks")
             }
-            .navigationTitle("Landmarks")
         }
         
         
