@@ -28,14 +28,18 @@ struct LandmarkList: View {
                 Toggle(isOn: $showFavoritesOnly) {
                     Text("Favorites Only")
                 }
+                .padding(.vertical, 8)
+                
                 ForEach(filteredLandmarks) { landmark in
                     NavigationLink(destination: LandmarkDetail(landmark: landmark)) {
                         LandmarkRow(landmark: landmark)
                             .padding(.vertical, 8.0)
                     }
                 }
+                
                 .navigationTitle("Landmarks")
             }
+            
         }
         
         
