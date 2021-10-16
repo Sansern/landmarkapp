@@ -30,6 +30,9 @@
 		05AAF886271750CD007C7CFE /* LandmarkRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AAF885271750CD007C7CFE /* LandmarkRow.swift */; };
 		05AAF888271752FA007C7CFE /* LandmarkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AAF887271752FA007C7CFE /* LandmarkList.swift */; };
 		05AAF88A271755FD007C7CFE /* LandmarkDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AAF889271755FD007C7CFE /* LandmarkDetail.swift */; };
+		05C2D0A0271B218D0025FA3C /* CategoryHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C2D09F271B218D0025FA3C /* CategoryHome.swift */; };
+		05C2D0A2271B33A80025FA3C /* CategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C2D0A1271B33A80025FA3C /* CategoryRow.swift */; };
+		05C2D0A4271B38310025FA3C /* CategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C2D0A3271B38310025FA3C /* CategoryItem.swift */; };
 		05CE92A027189C9F00D3F481 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CE929F27189C9F00D3F481 /* FavoriteButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +61,9 @@
 		05AAF885271750CD007C7CFE /* LandmarkRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkRow.swift; sourceTree = "<group>"; };
 		05AAF887271752FA007C7CFE /* LandmarkList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkList.swift; sourceTree = "<group>"; };
 		05AAF889271755FD007C7CFE /* LandmarkDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkDetail.swift; sourceTree = "<group>"; };
+		05C2D09F271B218D0025FA3C /* CategoryHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryHome.swift; sourceTree = "<group>"; };
+		05C2D0A1271B33A80025FA3C /* CategoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRow.swift; sourceTree = "<group>"; };
+		05C2D0A3271B38310025FA3C /* CategoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItem.swift; sourceTree = "<group>"; };
 		05CE929F27189C9F00D3F481 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -155,12 +161,23 @@
 			isa = PBXGroup;
 			children = (
 				05AAF86C271739E9007C7CFE /* ContentView.swift */,
+				05C2D09E271B210A0025FA3C /* Category */,
 				05085C3D2719EEB20091217C /* Hikes */,
 				0507F026271991BE0087A8BC /* Badges */,
 				05CE92A127189DF000D3F481 /* Landmarks */,
 				05CE92A227189E0300D3F481 /* Healpers */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		05C2D09E271B210A0025FA3C /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				05C2D09F271B218D0025FA3C /* CategoryHome.swift */,
+				05C2D0A1271B33A80025FA3C /* CategoryRow.swift */,
+				05C2D0A3271B38310025FA3C /* CategoryItem.swift */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		05CE92A127189DF000D3F481 /* Landmarks */ = {
@@ -255,14 +272,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05C2D0A2271B33A80025FA3C /* CategoryRow.swift in Sources */,
 				0507F02D271991BE0087A8BC /* HexagonParameters.swift in Sources */,
 				05085C432719EEB30091217C /* HikeGraph.swift in Sources */,
 				0507F030271991BE0087A8BC /* Badge.swift in Sources */,
 				05AAF86D271739E9007C7CFE /* ContentView.swift in Sources */,
 				05085C422719EEB30091217C /* GraphCapsule.swift in Sources */,
+				05C2D0A4271B38310025FA3C /* CategoryItem.swift in Sources */,
 				05AAF87B27174130007C7CFE /* MapView.swift in Sources */,
 				0507F02C271991BE0087A8BC /* RotatedBadgeSymbol.swift in Sources */,
 				05085C442719EEB30091217C /* HikeDetail.swift in Sources */,
+				05C2D0A0271B218D0025FA3C /* CategoryHome.swift in Sources */,
 				05AAF86B271739E9007C7CFE /* LandmarksApp.swift in Sources */,
 				05085C3C2719EC2D0091217C /* Hike.swift in Sources */,
 				0507F02E271991BE0087A8BC /* BadgeSymbol.swift in Sources */,
