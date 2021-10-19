@@ -39,10 +39,7 @@ struct CategoryHome: View {
             .sheet(isPresented: $showProfile) {
                 ProfileHost()
                     .environmentObject(modelData)
-            }
-                
-            
-            
+            }     
         }
     }
 }

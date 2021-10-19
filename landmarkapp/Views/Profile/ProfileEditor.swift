@@ -20,18 +20,21 @@ struct ProfileEditor: View {
     
     var body: some View {
         List {
-            VStack {
+            VStack() {
                 HStack {
                     Text("Username")
                         .bold()
                     Divider()
                     TextField(/*@START_MENU_TOKEN@*/"Placeholder"/*@END_MENU_TOKEN@*/, text: $profile.username)
                 }
+                .padding(.vertical,8.0)
+                
                 
                 Toggle(isOn: $profile.preferNotifications) {
                     Text("Enable Notifications")
                         .bold()
                 }
+                .padding(.vertical,8.0)
                 
                 VStack(alignment: .leading) {
                     Text("Seasonal Photo")
@@ -43,9 +46,13 @@ struct ProfileEditor: View {
                     }
                     .pickerStyle(SegmentedPickerStyle())
                 }
+                .padding(.vertical,8.0)
+                
                
                 DatePicker(selection: $profile.goalDate,in: dateRange, displayedComponents: .date) { Text("Goal Date").bold()
                 }
+                .pickerStyle(.wheel)
+                .padding(.vertical, 8.0)
                 
             }
         }
