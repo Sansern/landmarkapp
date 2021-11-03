@@ -17,7 +17,7 @@ struct LandmarkDetail: View {
     
     var body: some View {
         ScrollView {
-            VStack(spacing: 16.0) {
+            VStack {
                 CircleImage(image: landmark.image.resizable())
                     .scaledToFit()
             
@@ -46,7 +46,7 @@ struct LandmarkDetail: View {
                     .scaledToFit()
                 
             }
-            .padding(.horizontal, 16)
+            .padding(16)
         }
         .navigationTitle("Landmarks")
     }
@@ -57,11 +57,13 @@ struct LandmarkDetail_Previews: PreviewProvider {
         let modelData = ModelData()
         return Group {
             LandmarkDetail(landmark: modelData.landmarks[0])
+                .environmentObject(modelData)
                 .previewDevice("Apple Watch Series 6 - 40mm")
-                .environmentObject(modelData)
+                
             LandmarkDetail(landmark: modelData.landmarks[0])
-                .previewDevice("Apple Watch Series 7 - 45mm")
                 .environmentObject(modelData)
+                .previewDevice("Apple Watch Series 7 - 45mm")
+                
         }
     }
 }

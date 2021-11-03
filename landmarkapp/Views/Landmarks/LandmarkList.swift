@@ -1,52 +1,44 @@
-//
-//  LandmarkList.swift
-//  landmarkapp
-//
-//  Created by Sansern Wuthirat on 10/14/21.
-//
-
 import SwiftUI
 
 struct LandmarkList: View {
     @EnvironmentObject var modelData: ModelData
     @State private var showFavoritesOnly = false
     @State private var filter = FilterCategory.all
-    
+    @State private var selectedLandmark: Landmark?
+
     enum FilterCategory: String, CaseIterable, Identifiable {
-        // All
         case all = "All"
-        // Lakes
         case lakes = "Lakes"
-        // Rivers
-        case riveres = "Rivers"
-        // Moutains
+        case rivers = "Rivers"
         case mountains = "Mountains"
-        
-        var id: FilterCategory {self}
+
+        var id: FilterCategory { self }
     }
-    
-//    Compute a filtered version of the landmarks list by checking the showFavoritesOnly property and each landmark.isFavorite value.
+
     var filteredLandmarks: [Landmark] {
         modelData.landmarks.filter { landmark in
-            (!showFavoritesOnly || landmark.isFavorite) && (filter == .all || filter.rawValue == landmark.category.rawValue)
+            (!showFavoritesOnly || landmark.isFavorite)
+                && (filter == .all || filter.rawValue == landmark.category.rawValue)
         }
     }
-    
+
     var title: String {
-            let title = filter == .all ? "Landmarks" : filter.rawValue
-            return showFavoritesOnly ? "Favorite \(title)" : title
-        }
-    
+        let title = filter == .all ? "Landmarks" : filter.rawValue
+        return showFavoritesOnly ? "Favorite \(title)" : title
+    }
+
+    var index: Int? {
+        modelData.landmarks.firstIndex(where: { $0.id == selectedLandmark?.id })
+    }
+
     var body: some View {
         NavigationView {
-            List {
+            List(selection: $selectedLandmark) {
                 ForEach(filteredLandmarks) { landmark in
                     NavigationLink(destination: LandmarkDetail(landmark: landmark)) {
                         LandmarkRow(landmark: landmark)
-                        #if !os(macOS)
-                            .padding(.vertical, 8.0)
-                        #endif
                     }
+                    .tag(landmark)
                 }
             }
             .navigationTitle(title)
@@ -62,23 +54,23 @@ struct LandmarkList: View {
                         .pickerStyle(InlinePickerStyle())
                         
                         Toggle(isOn: $showFavoritesOnly) {
-                                                    Label("Favorites only", systemImage: "star.fill")
+                            Label("Favorites only", systemImage: "star.fill")
                         }
                     } label: {
                         Label("Filter", systemImage: "slider.horizontal.3")
                     }
                 }
             }
+
             Text("Select a Landmark")
         }
+        .focusedValue(\.selectedLandmark, $modelData.landmarks[index ?? 0])
     }
 }
 
 struct LandmarkList_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-            LandmarkList()
-                .environmentObject(ModelData())
-        }
+        LandmarkList()
+            .environmentObject(ModelData())
     }
 }
